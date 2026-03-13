@@ -5,16 +5,16 @@ description: A Unity-based platform for designing and running visuomotor learnin
 tags: [Unity, "C#", VR/XR, "Hardware Prototyping", "Usability Testing"]
 links:
   - label: Project Wiki
-    href: https://github.com/shanaam/VisuomotorExperimentFramework/wiki
+    href: https://github.com/shanaam/VisuomotorExperimentFramework/wiki/Creating-an-Experiment
   - label: JSON Config Tool
-    href: https://github.com/shanaam/VEF_JSON_Config
+    href: https://github.com/shanaam/VisuomotorExperimentFramework/wiki/JSON-Configurator
 ---
 
 ![Visuomotor Experiment Framework overview](/images/fulls/exp_framework.png)
 
 ## Overview
 
-The **Visuomotor Experiment Framework (VEF)** is a Unity (C#) platform built to streamline the design and deployment of motor learning experiments in immersive and traditional environments. It supports multi-platform deployment — head-mounted VR displays (HMDs) and desktop screens — allowing the same experiment logic to run across hardware without duplication of effort.
+The **Visuomotor Experiment Framework (VEF)** is a Unity (C#) platform built to streamline the design and deployment of motor learning experiments in immersive and traditional environments. It supports multi-platform deployment — head-mounted VR displays (HMDs) and desktop screens — allowing the same experiment logic to run across hardware (mice, visually tracked objects, and robitic arms) without duplication of effort.
 
 The framework was developed to address a real bottleneck in our lab: setting up a new experiment meant weeks of Unity boilerplate before any research task could be written. VEF abstracts that away, exposing a data-driven API for defining trial sequences, visual feedback conditions, and hardware configurations.
 
@@ -33,6 +33,6 @@ The videos below demonstrate four different task types running inside the framew
 
 ![VEF JSON Config tool](/images/fulls/json_maker.PNG)
 
-Configuring a new experiment in VEF involves writing a JSON file that specifies task parameters, trial sequences, and feedback conditions. To make this accessible to researchers without programming backgrounds, I built a companion GUI tool — the **VEF JSON Config** — that generates these files visually.
+Configuring a new experiment in VEF involves writing a JSON file that specifies task parameters, trial sequences, and feedback conditions. To make this accessible to researchers without programming backgrounds, we built a companion GUI tool — the **VEF JSON Config** — that generates these files visually.
 
-The tool was designed around a human-centered workflow: a researcher can storyboard a session, configure each trial block, and export a valid config without touching the Unity editor directly. This significantly reduced setup time and errors during piloting.
+The tool was designed around a human-centered workflow: a researcher can storyboard a session, configure each trial block, and export valid configs without touching the Unity editor directly. This significantly reduced setup time and errors during piloting.
