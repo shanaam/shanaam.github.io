@@ -1,0 +1,34 @@
+---
+title: Visuomotor Experiment Framework
+date: "2024-03-01"
+description: A Unity-based platform for designing and running visuomotor learning experiments across VR headsets and desktop screens.
+tags: [Unity, "C#", VR/XR, "Hardware Prototyping", "Usability Testing"]
+links:
+  - label: Project Wiki
+    href: https://github.com/shanaam/VisuomotorExperimentFramework/wiki
+  - label: JSON Config Tool
+    href: https://github.com/shanaam/VEF_JSON_Config
+---
+
+## Overview
+
+The **Visuomotor Experiment Framework (VEF)** is a Unity (C#) platform built to streamline the design and deployment of motor learning experiments in immersive and traditional environments. It supports multi-platform deployment — head-mounted VR displays (HMDs) and desktop screens — allowing the same experiment logic to run across hardware without duplication of effort.
+
+The framework was developed to address a real bottleneck in our lab: setting up a new experiment meant weeks of Unity boilerplate before any research task could be written. VEF abstracts that away, exposing a data-driven API for defining trial sequences, visual feedback conditions, and hardware configurations.
+
+## Example Tasks
+
+The videos below demonstrate four different task types running inside the framework — ranging from simple reaching tasks to gaze-based localization of unseen limbs.
+
+<VideoGrid>
+  <Video src="/videos/vr_reach_dual_adapt.mp4" label="Transporting objects in VR" />
+  <Video src="/videos/vr_localization_gaze.mp4" label="Gaze-based localization of unseen limbs" />
+  <Video src="/videos/vr_old_reach.mp4" label="Simple target acquisition" />
+  <Video src="/videos/vr_pinball_scored.mp4" label="Target hitting task (pinball)" />
+</VideoGrid>
+
+## JSON Configuration Tool
+
+Configuring a new experiment in VEF involves writing a JSON file that specifies task parameters, trial sequences, and feedback conditions. To make this accessible to researchers without programming backgrounds, I built a companion GUI tool — the **VEF JSON Config** — that generates these files visually.
+
+The tool was designed around a human-centered workflow: a researcher can storyboard a session, configure each trial block, and export a valid config without touching the Unity editor directly. This significantly reduced setup time and errors during piloting.

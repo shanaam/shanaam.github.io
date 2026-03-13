@@ -1,4 +1,22 @@
+# Next.js
+.next/
+out/
+node_modules/
+
+# Jekyll (legacy)
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Misc
+.DS_Store
+*.pem
+.env*
+!.env.example
+
+# VS Code
+.vs/
+
+# Debug
+npm-debug.log*
