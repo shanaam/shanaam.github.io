@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/academics", label: "Academics" },
   { href: "/contact", label: "Contact" },
@@ -19,8 +18,8 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
       <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-semibold text-gray-900 hover:text-accent transition-colors">
-          Shanaa
+        <Link href="/" className="text-base font-semibold text-gray-900 hover:text-accent transition-colors">
+          Shanaa Modchalingam
         </Link>
 
         {/* Desktop nav */}

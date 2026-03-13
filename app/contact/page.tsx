@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="flex items-center gap-5 mb-10">
         <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-gray-100 flex-shrink-0">
           <Image
-            src="/images/avatar.png"
+            src="/images/avatar_web.png"
             alt="Shanaa Modchalingam"
             fill
             className="object-cover"

@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(node -e \":*)",
+      "Bash(node -e \"const sharp = require\\(''sharp''\\); sharp\\(''d:/shanaa/repos/website/public/images/avatar.png''\\).metadata\\(\\).then\\(m => console.log\\(m.width, m.height\\)\\)\")"
     ]
   }
 }
