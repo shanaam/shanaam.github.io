@@ -28,7 +28,7 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
                 pathname === link.href
                   ? "bg-accent text-white"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -41,7 +41,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          className="sm:hidden p-2 rounded text-gray-600 hover:bg-gray-100"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -63,7 +63,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
                 pathname === link.href
                   ? "bg-accent text-white"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"

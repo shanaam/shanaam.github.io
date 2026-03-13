@@ -1,13 +1,12 @@
-import { getAllArticles } from "@/lib/articles";
 import ArticleList from "@/components/ArticleList";
+import { getAllArticles } from "@/lib/articles";
 
 export default function Work() {
   const articles = getAllArticles();
 
   return (
     <div className="page-container">
-      <p className="section-label">Work</p>
-      <h1 className="section-title">Articles</h1>
+      <p className="section-title">Articles</p>
       <ArticleList articles={articles} />
     </div>
   );

@@ -11,10 +11,10 @@ export default function ArticleList({ articles }: { articles: ArticleMeta[] }) {
             className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 py-4 hover:text-accent transition-colors"
           >
             <div>
-              <span className="font-medium text-gray-900 group-hover:text-accent transition-colors">
+              <span className="text-base font-medium text-gray-900 group-hover:text-accent transition-colors">
                 {article.frontmatter.title}
               </span>
-              <p className="text-sm text-gray-500 mt-0.5">
+              <p className="secondary-text mt-0.5">
                 {article.frontmatter.description}
               </p>
             </div>

@@ -92,12 +92,11 @@ const community = [
 export default function Academics() {
   return (
     <div className="page-container">
-      <p className="section-label">Academics</p>
       <h1 className="section-title">Education &amp; Credentials</h1>
 
       {/* Education */}
       <section className="mb-14">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Education</h2>
+        <p className="section-label">Education</p>
         <div className="flex flex-col gap-4">
           {education.map((e) => (
             <div key={e.degree + e.period} className="card flex items-start gap-4 p-5">
@@ -105,10 +104,10 @@ export default function Academics() {
                 <Image src={e.icon} alt={e.institution} fill className="object-contain" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900">{e.degree}</p>
-                <p className="text-sm text-gray-600 mt-0.5">{e.field}</p>
-                <p className="text-sm text-gray-500 mt-0.5">{e.institution}</p>
-                <p className="text-xs text-gray-400 mt-1">{e.period}</p>
+                <p className="text-base font-semibold text-gray-900">{e.degree}</p>
+                <p className="secondary-text mt-0.5">{e.field}</p>
+                <p className="secondary-text mt-0.5">{e.institution}</p>
+                <p className="secondary-text mt-1">{e.period}</p>
               </div>
             </div>
           ))}
@@ -117,16 +116,14 @@ export default function Academics() {
 
       {/* Expertise */}
       <section className="mb-14">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Areas of Expertise</h2>
+        <p className="section-label">Areas of Expertise</p>
         <div className="grid sm:grid-cols-3 gap-4">
           {expertise.map((area) => (
             <div key={area.category} className="card p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-3">
-                {area.category}
-              </p>
+              <p className="secondary-text font-semibold mb-3">{area.category}</p>
               <ul className="space-y-1.5">
                 {area.items.map((item) => (
-                  <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                  <li key={item} className="secondary-text flex items-start gap-2">
                     <span className="text-accent mt-0.5">–</span>
                     {item}
                   </li>
@@ -139,7 +136,7 @@ export default function Academics() {
 
       {/* Fellowships */}
       <section className="mb-14">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Fellowships &amp; Awards</h2>
+        <p className="section-label">Fellowships &amp; Awards</p>
         <div className="flex flex-col gap-4">
           {fellowships.map((f) => (
             <div key={f.title} className="card flex items-start gap-4 p-5">
@@ -147,9 +144,9 @@ export default function Academics() {
                 <Image src={f.icon} alt={f.org} fill className="object-contain" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900 text-sm">{f.title}</p>
-                <p className="text-sm text-gray-500 mt-0.5">{f.org}</p>
-                <p className="text-xs text-gray-400 mt-1">{f.period}</p>
+                <p className="text-base font-semibold text-gray-900">{f.title}</p>
+                <p className="secondary-text mt-0.5">{f.org}</p>
+                <p className="secondary-text mt-1">{f.period}</p>
               </div>
             </div>
           ))}
@@ -158,7 +155,7 @@ export default function Academics() {
 
       {/* Community */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Community Involvement</h2>
+        <p className="section-label">Community Involvement</p>
         <div className="flex flex-col gap-4">
           {community.map((c) => (
             <div key={c.role + c.org} className="card flex items-start gap-4 p-5">
@@ -166,9 +163,9 @@ export default function Academics() {
                 <Image src={c.icon} alt={c.org} fill className="object-contain" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900 text-sm">{c.role}</p>
-                <p className="text-sm text-gray-500 mt-0.5">{c.org}</p>
-                <p className="text-xs text-gray-400 mt-1">{c.period}</p>
+                <p className="text-base font-semibold text-gray-900">{c.role}</p>
+                <p className="secondary-text mt-0.5">{c.org}</p>
+                <p className="secondary-text mt-1">{c.period}</p>
               </div>
             </div>
           ))}

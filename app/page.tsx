@@ -1,5 +1,5 @@
-import { getAllArticles } from "@/lib/articles";
 import ArticleList from "@/components/ArticleList";
+import { getAllArticles } from "@/lib/articles";
 
 const tags = [
   "Multimodal ML",
@@ -12,14 +12,14 @@ const tags = [
 const positions = [
   {
     org: "Meta",
-    roles: ["Research Scientist Intern", "Research Engineer & Data Scientist"],
+    roles: ["Research Engineer & Data Scientist", "Research Scientist Intern"],
   },
   {
     org: "York University",
-    roles: ["PhD Candidate (2018–Present)", "MSc (2016–2018)"],
+    roles: ["PhD (2024)", "MSc (2018)"],
   },
   {
-    org: "Philipps University of Marburg",
+    org: "Marburg University",
     roles: ["Visiting Researcher"],
   },
 ];
@@ -32,10 +32,10 @@ export default function Home() {
       {/* Name & tags */}
       <section className="mb-8">
         <div className="flex items-baseline gap-3 mb-5">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Shanaathanan Modchalingam
+          <h1 className="section-title mb-0">
+            Shanaa Modchalingam
           </h1>
-          <span className="text-gray-400">Shanaa</span>
+          <span className="secondary-text">Shanaathanan</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -47,7 +47,7 @@ export default function Home() {
       </section>
 
       {/* Blurb */}
-      <section className="mb-12 space-y-3 text-gray-600 leading-relaxed text-sm">
+      <section className="mb-12 space-y-3 body-text">
         <p>
           Contributed to the ETL pipelines, development, and end-to-end testing
           of productionized multimodal machine learning solutions for wearables
@@ -67,12 +67,13 @@ export default function Home() {
 
       {/* Articles */}
       <section className="mb-16">
+        <p className="section-label">Articles</p>
         <ArticleList articles={articles} />
       </section>
 
       {/* Previously */}
       <section>
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
+        <p className="section-label">
           Previously at
         </p>
         <div className="flex flex-col gap-3">
@@ -84,7 +85,7 @@ export default function Home() {
               <span className="font-medium text-gray-700 sm:w-56 flex-shrink-0">
                 {p.org}
               </span>
-              <span className="text-sm text-gray-400">
+              <span className="secondary-text">
                 {p.roles.join(" · ")}
               </span>
             </div>
