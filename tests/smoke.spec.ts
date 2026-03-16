@@ -5,6 +5,9 @@ const routes = [
   { path: "/work", heading: "Articles" },
   { path: "/academics", heading: "Education & Credentials" },
   { path: "/contact", heading: "Contact" },
+  { path: "/work/visuomotor-experiment-framework", heading: "Visuomotor Experiment Framework" },
+  { path: "/work/reach-trajectory-visualization", heading: "Visualization of Reach Trajectories" },
+  { path: "/work/open-data", heading: "Open Data" },
 ];
 
 for (const { path, heading } of routes) {
