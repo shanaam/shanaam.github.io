@@ -1,46 +1,21 @@
-## Repository for my github page
+# shanaam.github.io
 
-Consistently a WIP.
+Personal website for Shanaa Modchalingam. Consistently a WIP.
 
-<!--
-You can use the [editor on GitHub](https://github.com/shanaam/website/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Stack
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- **Next.js 15** (App Router) with TypeScript and Tailwind CSS
+- **MDX articles** via `next-mdx-remote` — content lives in `content/articles/` as `.mdx` files with YAML frontmatter
+- **Static export** (`output: "export"`) deployed to GitHub Pages via GitHub Actions
+- **Turbopack** for fast local development (`next dev --turbopack`)
 
-### Markdown
+## Testing & CI
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Smoke tests are written with **Playwright** and run in CI before every deploy. Each test visits a page, asserts an HTTP 200, checks for expected content, and fails on any browser console errors.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+npm run build   # build static output to out/
+npm test        # run Playwright smoke tests against out/
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shanaam/website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
-
-### Theme
-Strata by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+The GitHub Actions workflow (`deploy.yml`) gates deployment on passing tests — if any page fails to render, the deploy is blocked.
