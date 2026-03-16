@@ -49,19 +49,24 @@ export default function Home() {
       {/* Blurb */}
       <section className="mb-12 space-y-3 body-text">
         <p>
-          Contributed to the ETL pipelines, development, and end-to-end testing
-          of productionized multimodal machine learning solutions for wearables
-          at Meta.
+          I'm a research engineer and data scientist who works at the intersection of machine learning, neuroscience, and human-computer interaction.
+          My career has moved between academic research and industry —
+          most recently building and deploying multimodal ML systems for wearables at Meta Reality Labs,
+          and before that, earning a PhD in sensorimotor neuroscience at York University.
         </p>
         <p>
-          Leveraging extensive experience in contextual AI, multimodal modeling,
-          user experience research, and data science, my work focuses on
-          combining modalities such as EMG, IMU, and computer vision to create
-          innovative advancements in wearable technology.
+          What I enjoy most is taking ownership of ambiguous, high-impact problems.
+          At Meta, that meant leading research integration into production ML pipelines and setting org-wide data standards for a team of about 100 people.
+          During my PhD, it meant founding a new research workstream, growing it from zero to 15 members,
+          and building tools that were adopted across multiple labs.
+          I've also held elected leadership positions on committees overseeing significant R&D funding decisions,
+          which gave me a perspective on research strategy that goes well beyond any single project.
         </p>
+
         <p>
-          Over seven years of experience in sensorimotor neuroscience and novel
-          interaction paradigms.
+          Technically, I work across the stack — Python, C++, PyTorch, React, Unity — and across modalities,
+          from computer vision and motion sensing to language models.
+          I'm always looking for opportunities where deep technical skill and broad organizational thinking intersect.
         </p>
       </section>
 
