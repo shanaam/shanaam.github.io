@@ -49,7 +49,7 @@ export default function Home() {
       {/* Blurb */}
       <section className="mb-12 space-y-3 body-text">
         <p>
-          I'm a research engineer and data scientist who works at the intersection of machine learning, neuroscience, and human-computer interaction.
+          I&apos;m a research engineer and data scientist who works at the intersection of machine learning, neuroscience, and human-computer interaction.
           My career has moved between academic research and industry —
           most recently building and deploying multimodal ML systems for wearables at Meta Reality Labs,
           and before that, earning a PhD in sensorimotor neuroscience at York University.
@@ -59,14 +59,14 @@ export default function Home() {
           At Meta, that meant leading research integration into production ML pipelines and setting org-wide data standards for a team of about 100 people.
           During my PhD, it meant founding a new research workstream, growing it from zero to 15 members,
           and building tools that were adopted across multiple labs.
-          I've also held elected leadership positions on committees overseeing significant R&D funding decisions,
+          I&apos;ve also held elected leadership positions on committees overseeing significant R&D funding decisions,
           which gave me a perspective on research strategy that goes well beyond any single project.
         </p>
 
         <p>
           Technically, I work across the stack — Python, C++, PyTorch, React, Unity — and across modalities,
           from computer vision and motion sensing to language models.
-          I'm always looking for opportunities where deep technical skill and broad organizational thinking intersect.
+          I&apos;m always looking for opportunities where deep technical skill and broad organizational thinking intersect.
         </p>
       </section>
 
