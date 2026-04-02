@@ -48,7 +48,7 @@ export default function Contact() {
     <div className="page-container">
       {/* Avatar */}
       <div className="flex items-center gap-5 mb-10">
-        <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-gray-100 flex-shrink-0">
+        <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-gray-100 dark:ring-stone-700 flex-shrink-0">
           <Image
             src="/images/avatar_web.png"
             alt="Shanaa Modchalingam"
@@ -77,13 +77,13 @@ export default function Contact() {
             href={s.href}
             target={s.href.startsWith("mailto:") ? undefined : "_blank"}
             rel={s.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-            className="card flex items-start gap-4 p-5 group"
+            className="card flex items-start gap-4 p-5 group hover:border-accent dark:hover:border-accent"
           >
-            <div className="text-gray-400 group-hover:text-accent transition-colors mt-0.5 flex-shrink-0">
+            <div className="text-gray-400 dark:text-stone-500 group-hover:text-accent transition-colors mt-0.5 flex-shrink-0">
               {s.icon}
             </div>
             <div>
-              <p className="font-semibold text-gray-900 group-hover:text-accent transition-colors">
+              <p className="font-semibold text-gray-900 dark:text-stone-100 group-hover:text-accent transition-colors">
                 {s.label}
               </p>
               <p className="text-sm text-accent font-medium">{s.value}</p>

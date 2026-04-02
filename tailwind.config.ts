@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,9 +15,9 @@ const config: Config = {
       },
       colors: {
         accent: {
-          DEFAULT: "#2563eb",
-          light: "#3b82f6",
-          dark: "#1d4ed8",
+          DEFAULT: "var(--color-accent)",
+          light: "var(--color-accent-light)",
+          dark: "var(--color-accent-dark)",
         },
       },
       animation: {

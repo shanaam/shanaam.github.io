@@ -3,7 +3,7 @@ import type { ArticleMeta } from "@/lib/articles";
 
 export default function ArticleList({ articles }: { articles: ArticleMeta[] }) {
   return (
-    <ul className="divide-y divide-gray-100">
+    <ul className="divide-y divide-gray-100 dark:divide-stone-700">
       {articles.map((article) => (
         <li key={article.slug}>
           <Link
@@ -11,7 +11,7 @@ export default function ArticleList({ articles }: { articles: ArticleMeta[] }) {
             className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 py-4 hover:text-accent transition-colors"
           >
             <div>
-              <span className="text-base font-medium text-gray-900 group-hover:text-accent transition-colors">
+              <span className="text-base font-medium text-gray-900 dark:text-stone-100 group-hover:text-accent transition-colors">
                 {article.frontmatter.title}
               </span>
               <p className="secondary-text mt-0.5">

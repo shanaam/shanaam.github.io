@@ -5,14 +5,24 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-white text-gray-900 font-sans antialiased;
+  :root {
+    --color-accent: #2563eb;
+    --color-accent-light: #3b82f6;
+    --color-accent-dark: #1d4ed8;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
+  .dark {
+    --color-accent: #f97316;
+    --color-accent-light: #fb923c;
+    --color-accent-dark: #ea580c;
+  }
+
+  body {
+    @apply bg-white text-gray-800 font-sans antialiased;
+    @apply dark:bg-stone-950 dark:text-stone-200;
+  }
+
+  h1, h2, h3, h4 {
     @apply font-semibold tracking-tight;
   }
 }
@@ -22,39 +32,46 @@
     @apply max-w-4xl mx-auto px-6 py-16;
   }
 
-  /* Section subheader (h2) — sits between h1 and body text */
-  .section-label {
-    @apply text-xl font-semibold text-gray-700 mb-3;
-  }
-
   /* Page-level h1 */
   .section-title {
     @apply text-2xl font-semibold text-gray-900 mb-6;
+    @apply dark:text-stone-100;
+  }
+
+  /* Section subheader (h2) */
+  .section-label {
+    @apply text-xl font-semibold text-gray-700 mb-3;
+    @apply dark:text-stone-300;
   }
 
   /* Body text — primary readable content */
   .body-text {
     @apply text-base text-gray-700 leading-relaxed;
+    @apply dark:text-stone-300;
   }
 
   /* Secondary text — supporting info, dates, roles */
   .secondary-text {
     @apply text-sm text-gray-500;
+    @apply dark:text-stone-400;
   }
 
   .card {
     @apply bg-white border border-gray-100 rounded shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden;
+    @apply dark:bg-stone-800 dark:border-stone-700;
   }
 
   .tag {
-    @apply inline-block bg-blue-50 text-blue-700 text-xs font-medium px-2.5 py-1 rounded;
+    @apply inline-block bg-blue-50 text-accent text-xs font-medium px-2.5 py-1 rounded;
+    @apply dark:bg-stone-700 dark:text-accent;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-accent text-white font-medium px-5 py-2.5 rounded hover:bg-accent-dark transition-colors duration-200;
+    @apply inline-flex items-center gap-2 bg-accent text-white font-medium px-5 py-2.5 rounded hover:opacity-90 transition-opacity duration-200;
   }
 
   .btn-secondary {
     @apply inline-flex items-center gap-2 border border-gray-200 text-gray-700 font-medium px-5 py-2.5 rounded hover:border-accent hover:text-accent transition-colors duration-200;
+    @apply dark:border-stone-600 dark:text-stone-300 dark:hover:border-accent dark:hover:text-accent;
   }
 }

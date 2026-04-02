@@ -104,7 +104,7 @@ export default function Academics() {
                 <Image src={e.icon} alt={e.institution} fill className="object-contain" />
               </div>
               <div>
-                <p className="text-base font-semibold text-gray-900">{e.degree}</p>
+                <p className="text-base font-semibold text-gray-900 dark:text-stone-100">{e.degree}</p>
                 <p className="secondary-text mt-0.5">{e.field}</p>
                 <p className="secondary-text mt-0.5">{e.institution}</p>
                 <p className="secondary-text mt-1">{e.period}</p>
@@ -144,7 +144,7 @@ export default function Academics() {
                 <Image src={f.icon} alt={f.org} fill className="object-contain" />
               </div>
               <div>
-                <p className="text-base font-semibold text-gray-900">{f.title}</p>
+                <p className="text-base font-semibold text-gray-900 dark:text-stone-100">{f.title}</p>
                 <p className="secondary-text mt-0.5">{f.org}</p>
                 <p className="secondary-text mt-1">{f.period}</p>
               </div>
@@ -163,7 +163,7 @@ export default function Academics() {
                 <Image src={c.icon} alt={c.org} fill className="object-contain" />
               </div>
               <div>
-                <p className="text-base font-semibold text-gray-900">{c.role}</p>
+                <p className="text-base font-semibold text-gray-900 dark:text-stone-100">{c.role}</p>
                 <p className="secondary-text mt-0.5">{c.org}</p>
                 <p className="secondary-text mt-1">{c.period}</p>
               </div>

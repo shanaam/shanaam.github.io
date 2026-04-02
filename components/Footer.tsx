@@ -32,9 +32,9 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-white">
+    <footer className="border-t border-gray-100 dark:border-stone-700 bg-white dark:bg-stone-900">
       <div className="max-w-4xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-500 dark:text-stone-400">
           &copy; {new Date().getFullYear()} Shanaathanan Modchalingam
         </p>
         <div className="flex items-center gap-4">
@@ -45,7 +45,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
-              className="text-gray-400 hover:text-accent transition-colors"
+              className="text-gray-400 dark:text-stone-500 hover:text-accent transition-colors"
             >
               {s.icon}
             </Link>

@@ -87,7 +87,7 @@ export default function Home() {
               key={p.org}
               className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-3"
             >
-              <span className="font-medium text-gray-700 sm:w-56 flex-shrink-0">
+              <span className="font-medium text-gray-700 dark:text-stone-300 sm:w-56 flex-shrink-0">
                 {p.org}
               </span>
               <span className="secondary-text">

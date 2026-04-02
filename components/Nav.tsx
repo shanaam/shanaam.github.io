@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -16,9 +17,9 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur border-b border-gray-100 dark:border-stone-700">
       <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="text-base font-semibold text-gray-900 hover:text-accent transition-colors">
+        <Link href="/" className="text-base font-semibold text-gray-900 dark:text-stone-100 hover:text-accent transition-colors">
           Shanaa Modchalingam
         </Link>
 
@@ -31,17 +32,18 @@ export default function Nav() {
               className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
                 pathname === link.href
                   ? "bg-accent text-white"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                  : "text-gray-600 dark:text-stone-400 hover:text-gray-900 dark:hover:text-stone-100 hover:bg-gray-100 dark:hover:bg-stone-800"
               }`}
             >
               {link.label}
             </Link>
           ))}
+          <ThemeToggle />
         </nav>
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden p-2 rounded text-gray-600 hover:bg-gray-100"
+          className="sm:hidden p-2 rounded text-gray-600 dark:text-stone-400 hover:bg-gray-100 dark:hover:bg-stone-800"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -57,7 +59,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="sm:hidden border-t border-gray-100 bg-white px-6 py-3 flex flex-col gap-1">
+        <nav className="sm:hidden border-t border-gray-100 dark:border-stone-700 bg-white dark:bg-stone-900 px-6 py-3 flex flex-col gap-1">
           {links.slice(1).map((link) => (
             <Link
               key={link.href}
@@ -66,12 +68,15 @@ export default function Nav() {
               className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
                 pathname === link.href
                   ? "bg-accent text-white"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                  : "text-gray-600 dark:text-stone-400 hover:text-gray-900 dark:hover:text-stone-100 hover:bg-gray-100 dark:hover:bg-stone-800"
               }`}
             >
               {link.label}
             </Link>
           ))}
+          <div className="px-3 py-1">
+            <ThemeToggle />
+          </div>
         </nav>
       )}
     </header>

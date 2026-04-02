@@ -52,10 +52,10 @@ export default async function ArticlePage({
             <span key={tag} className="tag">{tag}</span>
           ))}
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-100 mb-3">
           {article.frontmatter.title}
         </h1>
-        <p className="text-gray-500 leading-relaxed">{article.frontmatter.description}</p>
+        <p className="text-gray-500 dark:text-stone-400 leading-relaxed">{article.frontmatter.description}</p>
 
         {article.frontmatter.links && article.frontmatter.links.length > 0 && (
           <div className="flex flex-wrap gap-3 mt-5">
@@ -78,7 +78,7 @@ export default async function ArticlePage({
       </header>
 
       {/* MDX content */}
-      <div className="prose prose-gray max-w-none prose-headings:font-semibold prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 prose-code:text-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm">
+      <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-semibold prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 dark:prose-code:bg-stone-700 prose-code:text-gray-800 dark:prose-code:text-stone-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm">
         <MDXRemote
           source={article.content}
           components={mdxComponents}
