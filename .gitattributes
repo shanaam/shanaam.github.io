@@ -1,0 +1,14 @@
+# Normalize line endings to LF everywhere (prevents Windows CRLF creeping in)
+* text=auto eol=lf
+
+# Treat these as binary — never mangle line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary

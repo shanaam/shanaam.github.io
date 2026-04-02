@@ -8,6 +8,7 @@ const routes = [
   { path: "/work/visuomotor-experiment-framework", heading: "Visuomotor Experiment Framework" },
   { path: "/work/reach-trajectory-visualization", heading: "Visualization of Reach Trajectories" },
   { path: "/work/open-data", heading: "Open Data" },
+  { path: "/work/this-website", heading: "This Website" },
 ];
 
 for (const { path, heading } of routes) {

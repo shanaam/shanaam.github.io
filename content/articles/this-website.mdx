@@ -1,0 +1,47 @@
+---
+title: This Website
+date: "2026-03-01"
+description: The tech stack and design decisions behind this site — a statically exported Next.js site with MDX articles, deployed to GitHub Pages via CI.
+tags: [Next.js, TypeScript, MDX, CI/CD]
+links:
+  - label: GitHub
+    href: https://github.com/shanaam/shanaam.github.io
+---
+
+## Overview
+
+This site is a statically exported [Next.js 15](https://nextjs.org/) application written in TypeScript, styled with Tailwind CSS, and deployed to GitHub Pages. The goal is a minimal and fast personal site for hosting writing about personal projects and interests.
+
+## Stack
+
+**Framework:** Next.js 15 with the App Router. Pages are React Server Components by default, which keeps client-side JavaScript minimal. The site uses `output: "export"` to generate a fully static `out/` directory at build time — no Node.js server required at runtime.
+
+**Styling:** Tailwind CSS with a small set of utility classes defined in `globals.css` (`.page-container`, `.section-title`, `.section-label`, `.card`, `.tag`, `.btn-primary`, `.btn-secondary`, `.body-text`, `.secondary-text`). The typography plugin handles prose styling inside articles. The type scale is intentionally limited to four sizes: two heading levels, body, and secondary text.
+
+**Articles:** Written in MDX (Markdown + JSX) and stored in `content/articles/` as `.mdx` files with YAML frontmatter. [`next-mdx-remote`](https://github.com/hashicorp/next-mdx-remote) compiles them at build time via React Server Components. [`gray-matter`](https://github.com/jonschlinkert/gray-matter) parses the frontmatter to build the article index on the home page and `/work`. New articles are picked up automatically — no config changes needed.
+
+**Images:** Static assets live in `public/`. Because the site uses static export, Next.js image optimization (which requires a server) is disabled. Large source images are pre-processed with [`sharp`](https://sharp.pixelplumbing.com/) to web-appropriate sizes before committing.
+
+## Deployment
+
+Pushes to `main` trigger a GitHub Actions workflow that:
+
+1. Installs dependencies and runs `next build`
+2. Installs a Chromium browser and runs Playwright smoke tests against the built output
+3. Uploads the `out/` directory as a GitHub Pages artifact and deploys it
+
+The deploy step has a hard dependency on the test step — a failing test blocks the deploy entirely, leaving the live site unchanged.
+
+**Turbopack** (`next dev --turbopack`) is used locally for significantly faster hot module replacement during development. It is not used in production builds.
+
+## Cross-platform Development
+
+The repo is set up to work on both Windows and macOS:
+
+- `cross-env` handles environment variable syntax differences between PowerShell and bash in npm scripts
+- `.gitattributes` normalises line endings to LF so commits look the same regardless of OS
+- `postinstall` automatically downloads the Playwright Chromium binary after `npm install`, so the test suite is ready without extra steps
+
+## Tooling
+
+Development is done in VS Code with Claude Code (Anthropic's CLI) for pair programming. Claude Code was used extensively during the initial build-out of this site.
