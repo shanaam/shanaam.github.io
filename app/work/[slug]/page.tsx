@@ -78,7 +78,7 @@ export default async function ArticlePage({
       </header>
 
       {/* MDX content */}
-      <div className="prose prose-gray max-w-none prose-headings:font-semibold prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
+      <div className="prose prose-gray max-w-none prose-headings:font-semibold prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 prose-code:text-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm">
         <MDXRemote
           source={article.content}
           components={mdxComponents}

@@ -37,7 +37,7 @@ The GitHub Actions workflow (`deploy.yml`) gates deployment on passing tests —
    ```
 
 2. Add a corresponding smoke test entry in `tests/smoke.spec.ts`.
-3. The article is automatically listed on the home page and `/work`.
+3. Check: The article should automatically list on the home page and `/work`.
 
 ## Setup (new machine)
 
@@ -55,15 +55,6 @@ npm install
 npm run dev
 ```
 
-**GitHub SSH key** — required for pushing. Each machine needs its own key added to GitHub:
-
-```bash
-ssh-keygen -t ed25519 -C "your@email.com"   # generates ~/.ssh/id_ed25519
-cat ~/.ssh/id_ed25519.pub                    # copy this
-```
-
-Then add it at **github.com → Settings → SSH and GPG keys → New SSH key**.
-
 ## Local Development
 
 ```bash
@@ -80,7 +71,7 @@ The repo is set up to work identically on both:
 | Concern | Solution |
 | --- | --- |
 | Environment variables in npm scripts | `cross-env` — syntax works on both shells |
-| Line endings | `.gitattributes` enforces LF everywhere; no CRLF will sneak into commits |
+| Line endings | `.gitattributes` enforces LF everywhere (no CRLF) |
 | Playwright browsers | `postinstall` script installs Chromium automatically on `npm install` |
 | Native modules (`sharp`) | npm downloads the correct platform binary automatically |
 
