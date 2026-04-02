@@ -13,7 +13,7 @@ const socials = [
   },
   {
     label: "Google Scholar",
-    value: "Scholar profile",
+    value: "Academic publications",
     href: "https://scholar.google.com/citations?user=RHgSyaAAAAAJ&hl=en",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -23,7 +23,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    value: "shanaa-modchalingam",
+    value: "Profile",
     href: "https://www.linkedin.com/in/shanaam/",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
